@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-Tw">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,47 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Chat Bot</title>
   </head>
-  <body>
+  <body class="show-chatbot">
+    <header>
+      <h1>Chat Bot</h1>
+    </header>
+
+    <button class="chatbot-toggler">
+      <i class="bx bxs-message-dots"></i>
+      <i class="bx bxs-x-circle"></i>
+    </button>
+
+    <section class="chatbot">
+      <header>
+        <h2>聊天機器人</h2>
+        <i class="bx bxs-x-circle"></i>
+      </header>
+
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <i class="bx bx-bot"></i>
+          <p>嗨 👋🏻 <br />今天我該如何幫助您？</p>
+        </li>
+
+        <li class="chat outgoing">
+          <p>最近有什麼好玩的遊戲推薦嗎?</p>
+        </li>
+
+        <li class="chat incoming">
+          <i class="bx bx-bot"></i>
+          <p>嗨 👋🏻 <br />今天我該如何幫助您？</p>
+        </li>
+
+        <li class="chat outgoing">
+          <p>最近有什麼好玩的遊戲推薦嗎?</p>
+        </li>
+      </ul>
+
+      <div class="chat-input">
+        <textarea placeholder="輸入訊息..." required></textarea>
+        <i class="send-btn bx bxs-send"></i>
+      </div>
+    </section>
     <!-- js -->
     <script src="js/app.js"></script>
   </body>
