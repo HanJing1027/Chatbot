@@ -9,6 +9,7 @@
   }
 
   .chatbot-toggler {
+    transform: rotate(90deg);
 
     i:last-child {
       opacity: 1;
@@ -53,6 +54,7 @@ header {
   border-radius  : 50%;
   outline        : none;
   cursor         : pointer;
+  transition     : all .15s ease;
 
   i {
     position : absolute;
@@ -76,6 +78,7 @@ header {
   border-radius   : 15px;
   box-shadow      : 0 0 128px 0 #00000010, 0 32px 64px 0 #00000016;
   overflow        : hidden;
+  transition      : all .15s ease;
 
   transform       : scale(.5);
   transform-origin: bottom right;
@@ -124,6 +127,13 @@ header {
       border-radius: 10px 10px 0 10px;
       background   : #ADC7A3;
       max-width    : 75%;
+      white-space  : pre-wrap;
+      line-height  : 1.5;
+
+      &.error {
+        color           : #721C24;
+        background-color: #F8D7DA;
+      }
     }
   }
 
@@ -167,13 +177,14 @@ header {
     border-top: 1px solid #CCC;
 
     textarea {
-      width    : 100%;
-      height   : 55px;
-      resize   : none;
-      border   : none;
-      outline  : none;
-      font-size: .875rem;
-      padding  : 16px 15px 16px 0;
+      width     : 100%;
+      height    : 55px;
+      max-height: 150px;
+      resize    : none;
+      border    : none;
+      outline   : none;
+      font-size : .875rem;
+      padding   : 16px 15px 16px 0;
 
       &:valid~i {
         visibility: visible;
