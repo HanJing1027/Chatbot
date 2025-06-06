@@ -32,7 +32,7 @@ jobs:
           mkdir -p js
           cat > js/config.js << EOF
           export const config = {
-            API_URL: \`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent\`,
+            API_URL: "${{ secrets.API_URL }}",
             API_KEY: \`${{ secrets.API_KEY }}\`,
           };
           EOF
